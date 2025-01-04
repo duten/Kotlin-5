@@ -1,6 +1,6 @@
 package ru.otus.cars
 
-object Taz: Car {
+object Taz : Car {
     /**
      * Номерной знак
      */
@@ -17,6 +17,16 @@ object Taz: Car {
      */
     override val carOutput: CarOutput
         get() = throw NotImplementedError("Приборов нет")
+
+    override val tankMouth: TankMouth
+        get() = throw NotImplementedError("Взорвался")
+    override val tank: Tank
+        get() = throw NotImplementedError("Какая то ошибка")
+
+    override fun toString(): String {
+        return "Taz"
+    }
+
 
     /**
      * Получить оборудование

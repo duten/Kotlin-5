@@ -16,6 +16,9 @@ fun main() {
     techChecks()
     println("\n===> Taz...")
     println(Taz.color)
+    println("\n===> tank cars")
+    tankCars()
+
 }
 
 fun driveCars() {
@@ -27,6 +30,16 @@ fun driveCars() {
     println(vaz1.toString()) // Выводит 10 и случайную скорость
     vaz2.wheelToLeft(20)
     println(vaz2.toString()) // Выводит -20 и случайную скорость
+}
+
+fun tankCars() {
+    val cars = listOf(
+        Togliatti.buildCar(Vaz2107, Car.Plates("123", 77)),
+        Togliatti.buildCar(Vaz2108, Car.Plates("321", 78)),
+        Taz
+    )
+    val tankStation = TankStation()
+    tankStation.fillUpCars(cars)
 }
 
 fun innerNestedCheck() {
